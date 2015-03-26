@@ -1,7 +1,7 @@
 {
-  "name": "ember-cli-sass-generator",
-  "version": "0.0.0",
-  "description": "The default blueprint for ember-cli addons.",
+  "name": "ember-cli-sass-pods",
+  "version": "1.0.0",
+  "description": "Generates style.scss file into pods.",
   "directories": {
     "doc": "doc",
     "test": "tests"
@@ -11,11 +11,11 @@
     "build": "ember build",
     "test": "ember test"
   },
-  "repository": "",
+  "repository": "https://github.com/DudaDev/ember-cli-sass-pods.git",
   "engines": {
     "node": ">= 0.10.0"
   },
-  "author": "",
+  "author": "justtal",
   "license": "MIT",
   "devDependencies": {
     "broccoli-asset-rev": "^2.0.2",
@@ -35,7 +35,8 @@
     "ember-addon"
   ],
   "dependencies": {
-    "ember-cli-babel": "^4.0.0"
+    "ember-cli-babel": "^4.0.0",
+    "fs-extra": "^0.16.5"
   },
   "ember-addon": {
     "configPath": "tests/dummy/config"

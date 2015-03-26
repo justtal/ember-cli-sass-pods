@@ -1,25 +1,33 @@
-# Ember-cli-sass-generator
+# Ember-cli-sass-pods
 
-This README outlines the details of collaborating on this Ember addon.
+Enjoy styling your pods with the sass style file in the pod directory.
 
 ## Installation
 
-* `git clone` this repository
-* `npm install`
-* `bower install`
+Install [ember-cli-sass](https://github.com/aexmachina/ember-cli-sass).
 
-## Running
+```
+npm install --save-dev ember-cli-sass
+```
 
-* `ember server`
-* Visit your app at http://localhost:4200.
+Install ember-cli-sass-pods
 
-## Running Tests
+```
+npm install --save-dev ember-cli-sass-pods
+```
 
-* `ember test`
-* `ember test --server`
+Add this line to your app.scss file:
 
-## Building
+```
+@import "app/styles/import";
+```
 
-* `ember build`
+## Usage
 
-For more information on using ember-cli, visit [http://www.ember-cli.com/](http://www.ember-cli.com/).
+To generate style into your pod - just run:
+
+```
+ember g style [path] -p
+```
+
+Enjoy styling your pod! :)

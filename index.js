@@ -2,5 +2,5 @@
 'use strict';
 
 module.exports = {
-  name: 'ember-cli-sass-generator'
+  name: 'ember-cli-sass-pods'
 };

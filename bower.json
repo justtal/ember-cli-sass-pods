@@ -1,5 +1,5 @@
 {
-  "name": "ember-cli-sass-generator",
+  "name": "ember-cli-sass-pods",
   "dependencies": {
     "jquery": "^1.11.1",
     "ember": "1.10.0",
