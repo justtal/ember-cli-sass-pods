@@ -4,12 +4,12 @@ Enjoy styling your pods with the sass style file in the pod directory.
 
 ## What is ember-cli-sass-pods?
 Say you got contacts route and contact-box component.
-#####Generate regular route and component:
+##### Generate regular route and component:
 ```
 ember g route contacts -p
 ember g component contact-box -p
 ```
-#####Then, use ember-cli-sass-pods power and generate style:
+##### Then, use ember-cli-sass-pods power and generate style:
 ```
 ember g style contacts -p
 ember g style component/contact-box -p
@@ -33,7 +33,7 @@ app/styles/
 app/styles/app.scss
 app/styles/[importFileName].scss
 ```
-#####app/styles/[importFileName].scss
+##### app/styles/[importFileName].scss
 ```
 @import "app/contacts/style";
 @import "app/components/contact-box/style";
