@@ -16,7 +16,7 @@ Install ember-cli-sass-pods
 npm install --save-dev ember-cli-sass-pods
 ```
 
-## The import file
+### The import file
 You need to add the import file into your main app scss file.
 
 If you use podModulePrefix (which is deprecated) your imports file will be
