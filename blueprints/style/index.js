@@ -37,7 +37,7 @@ module.exports = {
 };
 
 function addScssToImportFile (name, options) {
-      var importFile = options.podsDir ? options.podsDir : 'imports',
+      var importFile = options.podsDir ? options.podsDir : 'pods',
           filePath = path.join(options.root, 'app/styles'),
           importScssPath = path.join(filePath, importFile + '.scss'),
           podsDir = options.podsDir ? options.podsDir + '/' : '',

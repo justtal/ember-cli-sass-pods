@@ -73,12 +73,12 @@ If you use podModulePrefix (which is deprecated) your imports file would be:
 ```
 otherwize it would be:
 ```
-imports.scss
+pods.scss
 ```
 Add import line into your main app scss file:
 
 ```
-@import "[podModulePrefix or imports]";
+@import "[podModulePrefix] or pods";
 ```
 
 ## Usage
