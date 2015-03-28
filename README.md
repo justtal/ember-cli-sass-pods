@@ -18,6 +18,7 @@ ember g style component/contact-box -p
 ##### Your awesome file structure would be:
 ```
 app/
+
 app/contacts
 app/contacts/route.js
 app/contacts/template.hbs
@@ -35,25 +36,35 @@ app/styles/[importFileName].scss
 ```
 ##### app/styles/[importFileName].scss
 ```
-@import "app/contacts/style";
-@import "app/components/contact-box/style";
+@import "contacts/style";
+@import "components/contact-box/style";
 ```
 
 ## Installation
 
-Install [ember-cli-sass](https://github.com/aexmachina/ember-cli-sass).
+##### Install [ember-cli-sass](https://github.com/aexmachina/ember-cli-sass).
 
 ```
 npm install --save-dev ember-cli-sass
 ```
 
-Install ember-cli-sass-pods
+##### Add app to include path in the config/environment.js
+
+```
+ENV.sassOptions = {
+  includePaths: [
+    'app'
+  ]
+}
+```
+
+##### Install ember-cli-sass-pods
 
 ```
 npm install --save-dev ember-cli-sass-pods
 ```
 
-### The import file
+##### The import file
 You need to add the import file into your main app scss file.
 
 If you use podModulePrefix (which is deprecated) your imports file will be
@@ -67,7 +78,7 @@ imports.scss
 Add import line into your main app scss file:
 
 ```
-@import "app/styles/[podModulePrefix or imports.scss]";
+@import "styles/[podModulePrefix or imports]";
 ```
 
 ## Usage
