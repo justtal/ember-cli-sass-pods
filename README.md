@@ -14,9 +14,8 @@ ember g component contact-box -p
 ember g style contacts -p
 ember g style component/contact-box -p
 ```
-Your awesome file structure would be:
 
-#####App structure
+##### Your awesome file structure would be:
 ```
 app/
 app/contacts
@@ -34,7 +33,7 @@ app/styles/
 app/styles/app.scss
 app/styles/[importFileName].scss
 ```
-######app/styles/[importFileName].scss
+#####app/styles/[importFileName].scss
 ```
 @import "app/contacts/style";
 @import "app/components/contact-box/style";
