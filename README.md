@@ -78,7 +78,7 @@ imports.scss
 Add import line into your main app scss file:
 
 ```
-@import "styles/[podModulePrefix or imports]";
+@import "[podModulePrefix or imports]";
 ```
 
 ## Usage
