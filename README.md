@@ -42,11 +42,11 @@ app/styles/[importFileName].scss
 
 ## Installation
 
-##### Install [ember-cli-sass](https://github.com/aexmachina/ember-cli-sass).
+##### Install ember-cli-sass-pods
 
-```
-npm install --save-dev ember-cli-sass
-```
+* `npm install ember-cli-sass-pods`
+* `ember g ember-cli-sass-pods`
+
 
 ##### Add app to include path in the config/environment.js
 
@@ -56,12 +56,6 @@ ENV.sassOptions = {
     'app'
   ]
 }
-```
-
-##### Install ember-cli-sass-pods
-
-```
-npm install --save-dev ember-cli-sass-pods
 ```
 
 ##### The import file
