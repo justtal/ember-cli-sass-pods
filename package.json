@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-sass-pods",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "Generates style.scss file into pods.",
   "directories": {
     "doc": "doc",
@@ -32,7 +32,9 @@
     "ember-export-application-global": "^1.0.2"
   },
   "keywords": [
-    "ember-addon"
+    "ember-addon",
+    "ember-cli-addon",
+    "ember-cli-sass"
   ],
   "dependencies": {
     "ember-cli-babel": "^4.0.0",
