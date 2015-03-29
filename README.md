@@ -12,7 +12,7 @@ ember g component contact-box -p
 ##### Then, use ember-cli-sass-pods power and generate style:
 ```
 ember g style contacts -p
-ember g style component/contact-box -p
+ember g style components/contact-box -p
 ```
 
 ##### Your awesome file structure would be:
