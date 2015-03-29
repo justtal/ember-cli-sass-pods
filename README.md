@@ -47,9 +47,9 @@ app/styles/[importFileName].scss
 * `npm install ember-cli-sass-pods`
 * `ember g ember-cli-sass-pods`
 
-It will automatically install [ember-cli-sass] (https://github.com/aexmachina/ember-cli-sass#ember-cli-sass) sass preprocess for your project.
+It will automatically install [ember-cli-sass](https://github.com/aexmachina/ember-cli-sass#ember-cli-sass) sass preprocess for your project.
 
-##### Add app to include path in the config/environment.js (see [ember-cli-sass] (https://github.com/aexmachina/ember-cli-sass#ember-cli-sass) documentation)
+##### Add app to include path in the config/environment.js (see [ember-cli-sass](https://github.com/aexmachina/ember-cli-sass#ember-cli-sass) documentation)
 
 ```
 ENV.sassOptions = {
