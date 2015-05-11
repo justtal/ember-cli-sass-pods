@@ -37,10 +37,10 @@ module.exports = {
 };
 
 function addScssToImportFile (name, options) {
-      var importFile = options.podsDir ? options.podsDir : 'pods',
+      var importFile = options.podsDir ? options.podsDir.replace(/(\\|\/)$/, '') : 'pods',
           filePath = path.join(options.root, 'app/styles'),
           importScssPath = path.join(filePath, importFile + '.scss'),
-          podsDir = options.podsDir ? options.podsDir + '/' : '',
+          podsDir = options.podsDir ? importFile + '/' : '',
           newLine = '@import "' + podsDir + options.name + '/style";\n',
           source;
 
