@@ -49,6 +49,20 @@ app/styles/[importFileName].scss
 
 It will automatically install [ember-cli-sass](https://github.com/aexmachina/ember-cli-sass#ember-cli-sass) sass preprocess package.
 
+##### Add app to include path in the Brocfile.js (see [ember-cli-sass](https://github.com/aexmachina/ember-cli-sass#ember-cli-sass) documentation)
+
+```
+var app = new EmberApp({
+    sassOptions: {
+        includePaths: [
+            'app'
+        ]
+    }
+});
+```
+
+------- Deprecated Config -------
+
 ##### Add app to include path in the config/environment.js (see [ember-cli-sass](https://github.com/aexmachina/ember-cli-sass#ember-cli-sass) documentation)
 
 ```
@@ -58,6 +72,9 @@ ENV.sassOptions = {
   ]
 }
 ```
+
+---------------------------------
+
 
 ##### The import file
 You need to add the import file into your main app scss file.
