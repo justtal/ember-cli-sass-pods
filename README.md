@@ -61,10 +61,8 @@ var app = new EmberApp({
 });
 ```
 
-------- Deprecated Config -------
-
-##### Add app to include path in the config/environment.js (see [ember-cli-sass](https://github.com/aexmachina/ember-cli-sass#ember-cli-sass) documentation)
-
+vvv---- Deprecated Config ----vvv
+###### config/environment.js
 ```
 ENV.sassOptions = {
   includePaths: [
@@ -72,8 +70,7 @@ ENV.sassOptions = {
   ]
 }
 ```
-
----------------------------------
+^^^----------------------------^^^
 
 
 ##### The import file
