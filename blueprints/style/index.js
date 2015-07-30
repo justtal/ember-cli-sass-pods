@@ -41,7 +41,7 @@ function addScssToImportFile (name, options) {
           filePath = path.join(options.root, 'app/styles'),
           importScssPath = path.join(filePath, importFile + '.scss'),
           podsDir = options.podsDir ? importFile + '/' : '',
-          newLine = '@import "' + podsDir + options.name + '/style";\n',
+          newLine = '@import "app/' + podsDir + options.name + '/style";\n',
           source;
 
       if (!fs.existsSync(filePath)) {
