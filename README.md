@@ -51,7 +51,7 @@ It will automatically install [ember-cli-sass](https://github.com/aexmachina/emb
 ##### The import file
 You need to add the import file into your main app scss file.
 
-If you use podModulePrefix (which is deprecated) your imports file would be:
+If you use podModulePrefix your imports file would be:
 ```
 [podModulePrefix].scss
 ```
