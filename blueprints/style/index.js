@@ -9,7 +9,9 @@ module.exports = {
   description: 'Generates a style.scss file',
 
   beforeInstall: function (options) {
-      this.podsDir = this._locals(options).fileMap.__path__.replace('/' + options.entity.name, '');
+      // replace \ with / for compatibility with windows-style nested paths
+      this.podsDir = this._locals(options).fileMap.__path__.replace(/\\/g, '/');
+      this.podsDir = this.podsDir.replace('/' + options.entity.name, '');
       this.podsDir = this.podsDir.replace(options.entity.name, '');
 
       if (!options.taskOptions.pod) {
