@@ -65,6 +65,16 @@ Add import line into your main app scss file:
 @import "[podModulePrefix] or pods";
 ```
 
+##### Watched folder
+Add paths for watching in the 'ember.cli-build.js':
+```
+var app = new EmberApp(defaults, {
+  sassOptions: {
+    includePaths: ['app']
+  }
+});
+```
+
 ## Usage
 
 To generate styles into your pod - just run:
