@@ -35,26 +35,58 @@ module.exports = {
           root: options.project.root,
           podsDir: this.podsDir
       });
-  }
+  },
+
+  afterUninstall: function(options) {
+        var entity = options.entity;
+
+        removeScssFromImportFile(entity.name, {
+          name: entity.name,
+          root: options.project.root,
+          podsDir: this.podsDir
+        });
+    }
 };
 
+function setSharedOpts(options) {
+    var opts = {};
+    opts.importFile = options.podsDir ? options.podsDir.replace(/(\\|\/)$/, '') : 'pods';
+    opts.filePath = path.join(options.root, 'app/styles');
+    opts.importScssPath = path.join(opts.filePath, opts.importFile + '.scss');
+    opts.podsDir = options.podsDir ? opts.importFile + '/' : '';
+    opts.newLine = '@import "app/' + opts.podsDir + options.name + '/style";\n';
+    return opts;
+}
+
 function addScssToImportFile (name, options) {
-      var importFile = options.podsDir ? options.podsDir.replace(/(\\|\/)$/, '') : 'pods',
-          filePath = path.join(options.root, 'app/styles'),
-          importScssPath = path.join(filePath, importFile + '.scss'),
-          podsDir = options.podsDir ? importFile + '/' : '',
-          newLine = '@import "app/' + podsDir + options.name + '/style";\n',
-          source;
+    var sharedOpts = setSharedOpts(options),
+        source;
 
-      if (!fs.existsSync(filePath)) {
-        mkdirp(filePath);
-      }
+    if (!fs.existsSync(sharedOpts.filePath)) {
+        mkdirp(sharedOpts.filePath);
+    }
 
-      if (!fs.existsSync(importScssPath)) {
-          fs.writeFileSync(importScssPath, newLine, 'utf8');
-      } else {
-          source = fs.readFileSync(importScssPath, 'utf-8');
-          source += newLine;
-          fs.writeFileSync(importScssPath, source);
-      }
-  }
+    if (!fs.existsSync(sharedOpts.importScssPath)) {
+        fs.writeFileSync(sharedOpts.importScssPath, sharedOpts.newLine, 'utf8');
+    } else {
+        source = fs.readFileSync(sharedOpts.importScssPath, 'utf-8');
+        source += sharedOpts.newLine;
+        fs.writeFileSync(sharedOpts.importScssPath, source);
+    }
+}
+
+function removeScssFromImportFile(name, options) {
+    var sharedOpts = setSharedOpts(options),
+        source;
+
+    source = fs.readFileSync(sharedOpts.importScssPath, 'utf-8');
+    sourceArray = source.split('\n');
+    sourceArrayMatchedIndex = sourceArray.indexOf(sharedOpts.newLine.replace('\n', ''));
+
+    if (sourceArrayMatchedIndex > -1) {
+        delete sourceArray[sourceArrayMatchedIndex];
+    }
+    
+    source = sourceArray.filter(Boolean).join('\n').trim() + '\n';
+    fs.writeFileSync(sharedOpts.importScssPath, source);
+}
